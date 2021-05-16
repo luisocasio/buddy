@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently -n 'client,server' -c 'cyan,magenta' \"npm run client\" \"npm run server\""
+  },
+  "dependencies": {
+    "apollo-server": "^2.24.0",
+    "dotenv": "^9.0.2",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.9"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
