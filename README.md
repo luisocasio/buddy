@@ -26,6 +26,10 @@ An application that alerts registered users
 
 ### Schema
 
+---
+
+<space><space>
+
 | User(buddy) | Type || Label|Type|
 | ----------- | ------ ||------|------|
 | id | Number || id|Number|
@@ -34,5 +38,3 @@ An application that alerts registered users
 | last-name | String ||descriptions| String |
 
 ---
-
-### UI/UX
