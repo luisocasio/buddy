@@ -14,7 +14,7 @@ An application that alerts registered users
 
 | _Backend_ | _Database_ | _Client_ | _ORM_    |
 | --------- | ---------- | -------- | -------- |
-| Graphql   | MongoDb    | React    | Mongoose |
+| Graphql   | MongoDB    | React    | Mongoose |
 
 ---
 
