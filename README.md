@@ -12,9 +12,9 @@ An application that alerts registered users
 
 <space><space>
 
-| _Backend_ | _Database_ | _Client_ |
-| --------- | ---------- | -------- |
-| Graphql   | MongoDb    | React    |
+| _Backend_ | _Database_ | _Client_ | _ORM_    |
+| --------- | ---------- | -------- | -------- |
+| Graphql   | MongoDb    | React    | Mongoose |
 
 ---
 
