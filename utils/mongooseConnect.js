@@ -1,16 +1,15 @@
-const mongoose = require("mongoose");
-const colors = require("colors");
+const mongoose = require('mongoose');
+const colors = require('colors');
 
-const mongooseConnect = () => {
-  mongoose.connect(`${process.env.db}`, {
+// Connection to our database
+mongoose
+  .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('Connected'.rainbow))
+  .catch((error) => {
+    console.error(error.message.rainbow);
   });
-
-  const db = mongoose.connection;
-
-  db.on("error", () => console.log("Connection Error".red));
-  db.once("open", () => console.log("Database Connected!".rainbow));
-};
-
-module.exports.mongooseConnect = mongooseConnect();
