@@ -30,11 +30,11 @@ An application that alerts registered users
 
 <space><space>
 
-| User(buddy) | Type   | Label        | Type   |
-| ----------- | ------ | ------------ | ------ |
-| id          | Number | id           | Number |
-| email       | String | created-date | Number |
-| first-name  | String | zip-code     | Number |
-| last-name   | String | descriptions | String |
+| User(buddy) | Type   | UserDetails | Type   |
+| ----------- | ------ | ----------- | ------ |
+| id          | Number | address     | String |
+| email       | String | zip-code    | Number |
+| first-name  | String |
+| last-name   | String |
 
 ---
