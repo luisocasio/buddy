@@ -14,4 +14,4 @@ const server = new ApolloServer({
   },
 });
 
-server.listen().then(({ url }) => console.log(`Listening on ${url}`));
+server.listen(process.env.PORT, () => console.log('Server is running!'));
