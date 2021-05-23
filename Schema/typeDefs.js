@@ -11,7 +11,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [RegisteredUsers]
+    greet: String
   }
 
   type Mutation {

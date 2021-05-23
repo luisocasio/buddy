@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 const resolvers = {
   Query: {
-    users: () => [RegisteredUsers],
+    greet: () => 'hi',
   },
   Mutation: {
     createUser: async (_, args) => {
