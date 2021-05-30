@@ -4,9 +4,7 @@ const resolvers = {
   Query: {
     getUserById: async (_, id) => {
       try {
-        let user = await User.findById(id);
-        console.log(user)
-        return user;
+        return await User.findById(id);
       } catch (err) {
         return console.log('error retrieving user.:', err);
       }
@@ -16,9 +14,7 @@ const resolvers = {
   Mutation: {
     createUser: async (_, args) => {
       try {
-        let res = await User.create(args);
-        console.log(res);
-        return res;
+        return await User.create(args);
       } catch (err) {
         return console.log('error creating user:', err);
       }
