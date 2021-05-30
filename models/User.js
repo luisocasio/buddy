@@ -1,5 +1,6 @@
 // Defining how our data will be stored in our database.
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 const validator = require('validator');
 
 // ID's generate automatically in mongoDB
@@ -34,6 +35,15 @@ const userSchema = new mongoose.Schema({
     minLength: 7,
   },
 });
+
+userSchema.pre('save', async function (next) {
+  // Hash the password before saving the user model
+  const user = this
+  if (user.isModified('password')) {
+    user.password = await bcrypt.hash(user.password, 10)
+  }
+  next()
+})
 
 // This is the compiling of the schema
 const User = mongoose.model('User', userSchema);
